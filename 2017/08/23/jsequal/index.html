@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>jsequal | Harry的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前置知识假值为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：12345undefinednullfalse+0、-0、NaN&quot;&quot; 除此以外别的值做强制类型转换的时候都是真值PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。 ! 123![] //false!1  //false!0  //true">
+  <meta name="description" content="前置知识假值为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：12345undefinednullfalse+0、-0、NaN&quot;&quot; 除此以外别的值做强制类型转换的时候都是真值PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jsequal">
 <meta property="og:url" content="http://yoursite.com/2017/08/23/jsequal/index.html">
 <meta property="og:site_name" content="Harry的博客">
-<meta property="og:description" content="前置知识假值为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：12345undefinednullfalse+0、-0、NaN&quot;&quot; 除此以外别的值做强制类型转换的时候都是真值PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。 ! 123![] //false!1  //false!0  //true">
-<meta property="og:updated_time" content="2017-08-23T10:41:46.344Z">
+<meta property="og:description" content="前置知识假值为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：12345undefinednullfalse+0、-0、NaN&quot;&quot; 除此以外别的值做强制类型转换的时候都是真值PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。">
+<meta property="og:updated_time" content="2017-08-23T10:44:10.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jsequal">
-<meta name="twitter:description" content="前置知识假值为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：12345undefinednullfalse+0、-0、NaN&quot;&quot; 除此以外别的值做强制类型转换的时候都是真值PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。 ! 123![] //false!1  //false!0  //true">
+<meta name="twitter:description" content="前置知识假值为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：12345undefinednullfalse+0、-0、NaN&quot;&quot; 除此以外别的值做强制类型转换的时候都是真值PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。">
   
     <link rel="alternative" href="/atom.xml" title="Harry的博客" type="application/atom+xml">
   
@@ -184,6 +184,7 @@
       
         <h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><h2 id="假值"><a href="#假值" class="headerlink" title="假值"></a>假值</h2><p>为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="literal">undefined</span></div><div class="line"><span class="literal">null</span></div><div class="line"><span class="literal">false</span></div><div class="line">+<span class="number">0</span>、<span class="number">-0</span>、<span class="literal">NaN</span></div><div class="line"><span class="string">""</span></div></pre></td></tr></table></figure></p>
 <p>除此以外别的值做强制类型转换的时候都是真值<br>PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。</p>
+<a id="more"></a>
 <p><strong>!</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">![] <span class="comment">//false</span></div><div class="line">!<span class="number">1</span>  <span class="comment">//false</span></div><div class="line">!<span class="number">0</span>  <span class="comment">//true</span></div></pre></td></tr></table></figure>
 <p>以此类推来进行显式的强制转换</p>
@@ -193,8 +194,7 @@
 <p>简单来说你只需要知道如果某个对象（[], {}）之类的要进行隐式类型转换，那么里面会顺序执行两个操作。即x.valueOf().toString()。这里有一个不常用的点要注意。我说的是对象类型进行“隐式”类型转化，如果是显式则不是如此。看下例子：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;</div><div class="line">    valueOf: <span class="function"><span class="params">()</span> =&gt;</span> <span class="number">1</span>,</div><div class="line">    toString: <span class="function"><span class="params">()</span> =&gt;</span> <span class="number">233</span></div><div class="line">&#125;</div><div class="line">a + <span class="string">""</span>     <span class="comment">// 1</span></div><div class="line"><span class="built_in">String</span>(a)  <span class="comment">// 233</span></div></pre></td></tr></table></figure>
 <p>隐式转化是按照先valueOf后toString的顺序执行，如果显式调用会直接执行oString，不过显式调用在js中覆盖率没有隐式的多，知道即可。</p>
-<h1 id="JavaScript-计算-x-y-规则"><a href="#JavaScript-计算-x-y-规则" class="headerlink" title="JavaScript 计算 x == y 规则"></a>JavaScript 计算 x == y 规则</h1><a id="more"></a>
-<h2 id="x，y如果类型相同"><a href="#x，y如果类型相同" class="headerlink" title="x，y如果类型相同"></a>x，y如果类型相同</h2><p>这个部分相信有问题的同学百度一下就好。数字的比大小，字符串比大小。里面需要小心的就是NaN != NaN 以及 对象如何比较大小？（[1] != [1]）</p>
+<h1 id="JavaScript-计算-x-y-规则"><a href="#JavaScript-计算-x-y-规则" class="headerlink" title="JavaScript 计算 x == y 规则"></a>JavaScript 计算 x == y 规则</h1><h2 id="x，y如果类型相同"><a href="#x，y如果类型相同" class="headerlink" title="x，y如果类型相同"></a>x，y如果类型相同</h2><p>这个部分相信有问题的同学百度一下就好。数字的比大小，字符串比大小。里面需要小心的就是NaN != NaN 以及 对象如何比较大小？（[1] != [1]）</p>
 <h2 id="重点：x，y类型不同"><a href="#重点：x，y类型不同" class="headerlink" title="重点：x，y类型不同"></a>重点：x，y类型不同</h2><p><strong> 1. x，y一方为布尔值<strong></strong></strong></p>
 <p>如果x，y其中一个是布尔值，那么对这个布尔值进行toNumber操作。发现问题了么童鞋们，来看下面代码:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="number">42</span> == <span class="literal">true</span>   <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
 <p>不了解规范的会认为，42是真值啊！42会转换为true！你别说如if(42){}这个42确实是真值。但是我们现在在讨论“==”下的转换，那么请记住规范规定了：类型不同时若一方是布尔值，是对布尔值进行类型转化即true =&gt; 1，之后我们就可以理解为什么42不等于true了因为1!= 42</p>

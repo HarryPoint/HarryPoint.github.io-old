@@ -184,16 +184,6 @@
       
         <h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><h2 id="假值"><a href="#假值" class="headerlink" title="假值"></a>假值</h2><p>为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="literal">undefined</span></div><div class="line"><span class="literal">null</span></div><div class="line"><span class="literal">false</span></div><div class="line">+<span class="number">0</span>、<span class="number">-0</span>、<span class="literal">NaN</span></div><div class="line"><span class="string">""</span></div></pre></td></tr></table></figure></p>
 <p>除此以外别的值做强制类型转换的时候都是真值<br>PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。</p>
-<p><strong>!</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">![] <span class="comment">//false</span></div><div class="line">!<span class="number">1</span>  <span class="comment">//false</span></div><div class="line">!<span class="number">0</span>  <span class="comment">//true</span></div></pre></td></tr></table></figure>
-<p>以此类推来进行显式的强制转换</p>
-<p><strong>undefined == null</strong></p>
-<p>参考规范11.9.3节抽象相等比较算法可得出<br>undefined == null 为true的结论。<br>PS：本次计算规则为抽象相等比较算法的总结，细节可参考上文11.9.3节规范。/true</p>
-<p><strong>ToPrimitive</strong></p>
-<p>简单来说你只需要知道如果某个对象（[], {}）之类的要进行隐式类型转换，那么里面会顺序执行两个操作。即x.valueOf().toString()。这里有一个不常用的点要注意。我说的是对象类型进行“隐式”类型转化，如果是显式则不是如此。看下例子：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;</div><div class="line">    valueOf: <span class="function"><span class="params">()</span> =&gt;</span> <span class="number">1</span>,</div><div class="line">    toString: <span class="function"><span class="params">()</span> =&gt;</span> <span class="number">233</span></div><div class="line">&#125;</div><div class="line">a + <span class="string">""</span>     <span class="comment">// 1</span></div><div class="line"><span class="built_in">String</span>(a)  <span class="comment">// 233</span></div></pre></td></tr></table></figure>
-<p>隐式转化是按照先valueOf后toString的顺序执行，如果显式调用会直接执行oString，不过显式调用在js中覆盖率没有隐式的多，知道即可。</p>
-<h1 id="JavaScript-计算-x-y-规则"><a href="#JavaScript-计算-x-y-规则" class="headerlink" title="JavaScript 计算 x == y 规则"></a>JavaScript 计算 x == y 规则</h1>
         
           <a class="article-more-a" href="/2017/08/23/jsequal/#more">more >></a>
         
