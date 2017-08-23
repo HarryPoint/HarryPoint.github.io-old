@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: js | Harry的博客</title>
+  <title>jsequal | Harry的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="爱我比什么都重要">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Harry的博客">
-<meta property="og:url" content="http://yoursite.com/tags/js/index.html">
+  <meta name="description" content="前置知识假值为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：12345undefinednullfalse+0、-0、NaN&quot;&quot; 除此以外别的值做强制类型转换的时候都是真值PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。 ! 123![] //false!1  //false!0  //true">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jsequal">
+<meta property="og:url" content="http://yoursite.com/2017/08/23/jsequal/index.html">
 <meta property="og:site_name" content="Harry的博客">
-<meta property="og:description" content="爱我比什么都重要">
+<meta property="og:description" content="前置知识假值为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：12345undefinednullfalse+0、-0、NaN&quot;&quot; 除此以外别的值做强制类型转换的时候都是真值PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。 ! 123![] //false!1  //false!0  //true">
+<meta property="og:updated_time" content="2017-08-23T10:41:46.344Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Harry的博客">
-<meta name="twitter:description" content="爱我比什么都重要">
+<meta name="twitter:title" content="jsequal">
+<meta name="twitter:description" content="前置知识假值为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：12345undefinednullfalse+0、-0、NaN&quot;&quot; 除此以外别的值做强制类型转换的时候都是真值PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。 ! 123![] //false!1  //false!0  //true">
   
     <link rel="alternative" href="/atom.xml" title="Harry的博客" type="application/atom+xml">
   
@@ -160,36 +162,84 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-jsequal" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      jsequal
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/23/jsequal/" class="archive-article-date">
+
+        
+        <a href="/2017/08/23/jsequal/" class="archive-article-date">
   	<time datetime="2017-08-23T09:22:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-23</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/23/jsequal/">jsequal</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><h2 id="假值"><a href="#假值" class="headerlink" title="假值"></a>假值</h2><p>为什么提到假值，而不是真值是因为真值真的是太！多！了！但是假值只有以下这么几个：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="literal">undefined</span></div><div class="line"><span class="literal">null</span></div><div class="line"><span class="literal">false</span></div><div class="line">+<span class="number">0</span>、<span class="number">-0</span>、<span class="literal">NaN</span></div><div class="line"><span class="string">""</span></div></pre></td></tr></table></figure></p>
+<p>除此以外别的值做强制类型转换的时候都是真值<br>PS：有兴趣的同学可以试试new Number(0)之类的通过对象包装的假值的结果，不过这并不常用故不属于本次讨论范畴。</p>
+<p><strong>!</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">![] <span class="comment">//false</span></div><div class="line">!<span class="number">1</span>  <span class="comment">//false</span></div><div class="line">!<span class="number">0</span>  <span class="comment">//true</span></div></pre></td></tr></table></figure>
+<p>以此类推来进行显式的强制转换</p>
+<p><strong>undefined == null</strong></p>
+<p>参考规范11.9.3节抽象相等比较算法可得出<br>undefined == null 为true的结论。<br>PS：本次计算规则为抽象相等比较算法的总结，细节可参考上文11.9.3节规范。/true</p>
+<p><strong>ToPrimitive</strong></p>
+<p>简单来说你只需要知道如果某个对象（[], {}）之类的要进行隐式类型转换，那么里面会顺序执行两个操作。即x.valueOf().toString()。这里有一个不常用的点要注意。我说的是对象类型进行“隐式”类型转化，如果是显式则不是如此。看下例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;</div><div class="line">    valueOf: <span class="function"><span class="params">()</span> =&gt;</span> <span class="number">1</span>,</div><div class="line">    toString: <span class="function"><span class="params">()</span> =&gt;</span> <span class="number">233</span></div><div class="line">&#125;</div><div class="line">a + <span class="string">""</span>     <span class="comment">// 1</span></div><div class="line"><span class="built_in">String</span>(a)  <span class="comment">// 233</span></div></pre></td></tr></table></figure>
+<p>隐式转化是按照先valueOf后toString的顺序执行，如果显式调用会直接执行oString，不过显式调用在js中覆盖率没有隐式的多，知道即可。</p>
+<h1 id="JavaScript-计算-x-y-规则"><a href="#JavaScript-计算-x-y-规则" class="headerlink" title="JavaScript 计算 x == y 规则"></a>JavaScript 计算 x == y 规则</h1><a id="more"></a>
+<h2 id="x，y如果类型相同"><a href="#x，y如果类型相同" class="headerlink" title="x，y如果类型相同"></a>x，y如果类型相同</h2><p>这个部分相信有问题的同学百度一下就好。数字的比大小，字符串比大小。里面需要小心的就是NaN != NaN 以及 对象如何比较大小？（[1] != [1]）</p>
+<h2 id="重点：x，y类型不同"><a href="#重点：x，y类型不同" class="headerlink" title="重点：x，y类型不同"></a>重点：x，y类型不同</h2><p><strong> 1. x，y一方为布尔值<strong></strong></strong></p>
+<p>如果x，y其中一个是布尔值，那么对这个布尔值进行toNumber操作。发现问题了么童鞋们，来看下面代码:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="number">42</span> == <span class="literal">true</span>   <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+<p>不了解规范的会认为，42是真值啊！42会转换为true！你别说如if(42){}这个42确实是真值。但是我们现在在讨论“==”下的转换，那么请记住规范规定了：类型不同时若一方是布尔值，是对布尔值进行类型转化即true =&gt; 1，之后我们就可以理解为什么42不等于true了因为1!= 42</p>
+<p><strong> 2.  x，y为数字和字符串<strong></strong></strong></p>
+<p>将字符串的一方进行toNumber()操作</p>
+<p><strong> 2.  x，y一方为对象<strong></strong></strong></p>
+<p>将对象进行ToPrimitive()操作</p>
+<h1 id="计算示例代码结果"><a href="#计算示例代码结果" class="headerlink" title="计算示例代码结果"></a>计算示例代码结果</h1><p><strong>2 == true</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="literal">true</span> =&gt; 一方为布尔值：<span class="literal">true</span> =&gt; <span class="number">1</span></div><div class="line"><span class="number">2</span> != <span class="number">1</span></div></pre></td></tr></table></figure>
+<p><strong>2 == false</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="literal">true</span> =&gt; 一方为布尔值：<span class="literal">false</span> =&gt; <span class="number">0</span></div><div class="line"><span class="number">2</span> != <span class="number">0</span></div></pre></td></tr></table></figure>
+<p><strong>[] == false</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>、[]为对象： ToPrimitive([]) =&gt; [].valueOf().toString() =&gt; <span class="string">""</span></div><div class="line"><span class="number">2</span>、<span class="literal">false</span>为布尔：<span class="literal">false</span> =&gt; <span class="number">0</span></div><div class="line"><span class="number">3</span>、等式变为：<span class="string">""</span> == <span class="number">0</span></div><div class="line"><span class="number">4</span>、一方为数字，一方为字符</div><div class="line">    <span class="built_in">Number</span>(<span class="string">""</span>) =&gt; <span class="number">0</span></div><div class="line">    =&gt; <span class="number">0</span> == <span class="number">0</span></div></pre></td></tr></table></figure>
+<p><strong>“0” == false</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>、<span class="literal">false</span>为布尔：<span class="literal">false</span> =&gt; <span class="number">0</span></div><div class="line"><span class="number">2</span>、等式变为：<span class="string">"0"</span> == <span class="number">0</span></div><div class="line"><span class="number">3</span>、一方为数字，一方为字符</div><div class="line">    <span class="built_in">Number</span>(<span class="string">"0"</span>) =&gt; <span class="number">0</span></div><div class="line">    =&gt; <span class="number">0</span> == <span class="number">0</span></div></pre></td></tr></table></figure>
+<p><strong>终极版 [] == ![]</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>、左侧[]为对象： ToPrimitive([]) =&gt; [].valueOf().toString() =&gt; <span class="string">""</span></div><div class="line"><span class="number">2</span>、右侧![]先进行显式类型转换：<span class="literal">false</span>(除了上文提到的假值剩下都是真值)</div><div class="line"><span class="number">3</span>、等式变为： <span class="string">""</span> == <span class="literal">false</span></div><div class="line"><span class="number">4</span>、一方为布尔：<span class="literal">false</span> =&gt; <span class="number">0</span></div><div class="line"><span class="number">5</span>、等式变为：<span class="string">""</span> == <span class="number">0</span></div><div class="line"><span class="number">5</span>、一方为数字，一方为字符</div><div class="line">    <span class="built_in">Number</span>(<span class="string">""</span>) =&gt; <span class="number">0</span></div><div class="line">    =&gt; <span class="number">0</span> == <span class="number">0</span></div></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -201,73 +251,104 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/23/jsequal/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-page">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/04/My-Gallery/" class="archive-article-date">
-  	<time datetime="2017-08-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/12/weinre/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">weinre</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/04/My-Gallery/">My Gallery</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -290,9 +371,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
